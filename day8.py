@@ -1,14 +1,27 @@
+# Making a Simple calculator 
+num1 = float(input("Enter the number: "))
 
-# Get user's name
-name = input("Enter your name: ")
-print("Hello, " + name + "!")
+operation = input("Enter Operator: ")
+num2 = float(input("Enter the number: "))
 
-# Get user's age and convert it to an integer
-age = input("Enter your age: ")
-age = int(age)
-print("You are", age, "years old.")
+if operation == "+": 
+    result = num1 + num2
+elif operation == "-": 
+    result = num1 - num2
+elif operation == "*": 
+    result = num1 * num2
+elif operation == "/":
+    if num2 != 0:
+        result = num1 / num2
+    else: 
+        result = "Error: Division"
+elif operation == "**": 
+    result = num1 + num2
+else:
+    result = "Error: Invalid operator"
+    
+print(f"Result: {result}")
 
-# Get multiple inputs separated by spaces and convert them to integers
-numbers = input("Enter numbers separated by spaces: ")
-numbers_list = list(map(int, numbers.split()))
-print("The numbers are:", numbers_list)
+
+
+
